@@ -24,17 +24,21 @@ function isBareEscalation(msg) {
 
 class LLMAgent {
   constructor() {
-    // Ollama configuration (completely local, open-source)
-    this.ollamaUrl = process.env.OLLAMA_URL || 'http://localhost:11434';
-    this.defaultModel = process.env.LLM_MODEL || 'mistral'; // mistral, llama2, neural-chat, or dolphin-mixtral
-    this.conversationMemories = {}; // Store memories per conversation
-    
-    console.log(`🤖 LLM Agent initialized - Model: ${this.defaultModel}`);
-    console.log(`📍 Ollama URL: ${this.ollamaUrl}`);
-    console.log(`🔓 100% Open-Source, Zero API Limits`);
+    // Cloud-friendly LLM stack: prefer Groq (OpenAI-compatible, free tier).
+    // Falls back to Ollama for local dev when GROQ_API_KEY is unset.
+    this.groqApiKey = process.env.GROQ_API_KEY || '';
+    this.groqUrl = process.env.GROQ_URL || 'https://api.groq.com/openai/v1/chat/completions';
+    this.groqModel = process.env.GROQ_MODEL || 'llama-3.1-8b-instant';
 
-    // Test Ollama connection on startup
-    this.testOllamaConnection();
+    this.ollamaUrl = process.env.OLLAMA_URL || 'http://localhost:11434';
+    this.ollamaModel = process.env.OLLAMA_MODEL || process.env.LLM_MODEL || 'mistral';
+
+    this.provider = this.groqApiKey ? 'groq' : 'ollama';
+    this.defaultModel = this.provider === 'groq' ? this.groqModel : this.ollamaModel;
+    this.conversationMemories = {};
+
+    console.log(`🤖 LLM Agent initialized — provider=${this.provider} model=${this.defaultModel}`);
+    if (this.provider === 'ollama') this.testOllamaConnection();
   }
 
   /**
@@ -59,11 +63,42 @@ class LLMAgent {
   }
 
   /**
-   * Call Ollama LLM (100% local, open-source, no limits)
+   * Provider-agnostic LLM call. Uses Groq when GROQ_API_KEY is set (cloud
+   * deployment), Ollama otherwise (local dev).
    */
-  async callOllama(messages, temperature = 0.7, model = this.defaultModel) {
+  async callOllama(messages, temperature = 0.7) {
+    if (this.provider === 'groq') return this.callGroq(messages, temperature);
+    return this.callLocalOllama(messages, temperature);
+  }
+
+  async callGroq(messages, temperature = 0.7) {
     try {
-      // Format messages for Ollama
+      const response = await axios.post(
+        this.groqUrl,
+        {
+          model: this.groqModel,
+          messages,
+          temperature,
+          max_tokens: 400,
+          top_p: 0.9
+        },
+        {
+          timeout: 30000,
+          headers: {
+            Authorization: `Bearer ${this.groqApiKey}`,
+            'Content-Type': 'application/json'
+          }
+        }
+      );
+      return response.data?.choices?.[0]?.message?.content || 'Unable to generate response';
+    } catch (error) {
+      console.error('Groq error:', error.response?.data || error.message);
+      throw new Error('LLM service unavailable (Groq).');
+    }
+  }
+
+  async callLocalOllama(messages, temperature = 0.7) {
+    try {
       const prompt = messages.map(m => {
         if (m.role === 'system') return `System: ${m.content}`;
         if (m.role === 'assistant') return `Assistant: ${m.content}`;
@@ -73,31 +108,23 @@ class LLMAgent {
       const response = await axios.post(
         `${this.ollamaUrl}/api/generate`,
         {
-          model: model,
-          prompt: prompt,
+          model: this.ollamaModel,
+          prompt,
           stream: false,
-          temperature: temperature,
+          temperature,
           top_k: 40,
           top_p: 0.9,
           num_predict: 256
         },
         { timeout: 120000 }
       );
-
       return response.data.response || 'Unable to generate response';
     } catch (error) {
       console.error('Ollama error:', error.message);
-      
-      // If Ollama is not available, return helpful message
       if (error.code === 'ECONNREFUSED') {
-        return `I'm temporarily unavailable. Please make sure Ollama is running:\n\n` +
-               `1. Install Ollama: https://ollama.ai\n` +
-               `2. Start Ollama: ollama serve\n` +
-               `3. Pull a model: ollama pull mistral\n\n` +
-               `Then try again!`;
+        return `I'm temporarily unavailable. Please start Ollama (ollama serve) or set GROQ_API_KEY in the environment.`;
       }
-
-      throw new Error('LLM service unavailable. Make sure Ollama is running.');
+      throw new Error('LLM service unavailable.');
     }
   }
 

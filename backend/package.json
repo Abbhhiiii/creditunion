@@ -26,10 +26,7 @@
     "dotenv": "^16.3.1",
     "jsonwebtoken": "^9.0.2",
     "ws": "^8.14.2",
-    "bcryptjs": "^2.4.3",
-    "axios": "^1.6.0",
-    "natural": "^6.7.0",
-    "chroma-js": "^2.5.0"
+    "axios": "^1.6.0"
   },
   "devDependencies": {
     "nodemon": "^3.0.1",

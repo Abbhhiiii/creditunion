@@ -36,43 +36,51 @@ const conversationStartTimes = new Map();
 const aiResolvedConversations = new Map();
 
 // ============ MIDDLEWARE SETUP ============
+const allowedOrigins = (process.env.CORS_ORIGINS || '')
+  .split(',')
+  .map(s => s.trim())
+  .filter(Boolean);
+const localOrigins = [
+  'http://localhost:3000', 'http://localhost:3001',
+  'http://localhost:3002', 'http://localhost:3003', 'http://localhost:3004'
+];
+const fixedOrigins = [...localOrigins, ...allowedOrigins, process.env.FRONTEND_URL, process.env.DASHBOARD_URL].filter(Boolean);
+
 app.use(cors({
-  origin: [
-    'http://localhost:3000',
-    'http://localhost:3001',
-    'http://localhost:3002',
-    'http://localhost:3003',
-    'http://localhost:3004',
-    process.env.FRONTEND_URL
-  ],
+  origin: (origin, cb) => {
+    // Allow non-browser tools (curl, server-to-server) and any whitelisted origin.
+    if (!origin) return cb(null, true);
+    if (fixedOrigins.includes(origin)) return cb(null, true);
+    // Allow any *.vercel.app preview/production deploy by default
+    if (/^https:\/\/[a-z0-9-]+\.vercel\.app$/i.test(origin)) return cb(null, true);
+    return cb(new Error(`CORS: origin ${origin} not allowed`));
+  },
   credentials: true
 }));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Database Connection Pool (Optional - graceful fallback to mock data)
+// Database is fully optional. Only attempt a connection if DATABASE_URL is set.
 let pool = null;
 let dbConnected = false;
-
-try {
-  pool = new Pool({
-    connectionString: process.env.DATABASE_URL || 'postgresql://user:password@localhost:5432/creditassist'
-  });
-
-  // Test connection
-  pool.query('SELECT 1', (err) => {
-    if (err) {
-      console.log('⚠️  Database unavailable - using mock data mode');
-      dbConnected = false;
-    } else {
-      console.log('✓ Database connected');
-      dbConnected = true;
-    }
-  });
-} catch (error) {
-  console.log('⚠️  Database unavailable - using mock data mode');
-  dbConnected = false;
+if (process.env.DATABASE_URL) {
+  try {
+    pool = new Pool({ connectionString: process.env.DATABASE_URL });
+    pool.on('error', () => {});
+    pool.query('SELECT 1', (err) => {
+      if (err) {
+        console.log('⚠️  Database unreachable — running in mock data mode');
+      } else {
+        console.log('✓ Database connected');
+        dbConnected = true;
+      }
+    });
+  } catch {
+    console.log('⚠️  Database init failed — running in mock data mode');
+  }
+} else {
+  console.log('ℹ️  No DATABASE_URL — running in mock data mode (expected for free deploy)');
 }
 
 // ============ AUTHENTICATION MIDDLEWARE ============
@@ -652,9 +660,13 @@ app.use((err, req, res, next) => {
 // ============ START SERVER ============
 const PORT = process.env.PORT || 5000;
 
-server.listen(PORT, () => {
+server.listen(PORT, '0.0.0.0', () => {
   console.log(`✓ CreditAssist AI Backend running on port ${PORT}`);
   console.log(`✓ Environment: ${process.env.NODE_ENV || 'development'}`);
 });
+
+// Don't crash the process on a stray rejection — keep serving requests.
+process.on('unhandledRejection', (err) => console.error('unhandledRejection:', err?.message || err));
+process.on('uncaughtException', (err) => console.error('uncaughtException:', err?.message || err));
 
 module.exports = { app, pool, wss };
