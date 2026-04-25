@@ -169,7 +169,11 @@ export default function ChatInterface({ conversationId, userId, user, token }) {
               className={styles.input}
               disabled={loading}
             />
-            <VoiceInput onVoiceInput={sendMessage} language={language} disabled={loading} />
+            <VoiceInput
+              onTranscript={(text) => setInputValue(text)}
+              language={language}
+              disabled={loading}
+            />
             <button
               onClick={() => sendMessage(inputValue)}
               disabled={!inputValue.trim() || loading}

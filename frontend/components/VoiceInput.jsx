@@ -1,86 +1,90 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import styles from '../styles/VoiceInput.module.css';
 
 /**
- * Voice Input Component
- * Web Speech API for voice-to-text
+ * Web Speech API → fills the chat input as you speak.
+ * Click to start, click again to stop. The user reviews and presses Send.
  */
-export default function VoiceInput({ onVoiceInput, language = 'en', disabled }) {
+export default function VoiceInput({ onTranscript, language = 'en', disabled }) {
   const [isListening, setIsListening] = useState(false);
-  const [transcript, setTranscript] = useState('');
+  const [supported, setSupported] = useState(true);
+  const recognitionRef = useRef(null);
+  const finalTextRef = useRef('');
 
-  const startListening = () => {
-    // Check browser support
-    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-    
-    if (!SpeechRecognition) {
-      alert('Speech Recognition not supported in your browser');
+  useEffect(() => {
+    const SR = typeof window !== 'undefined' && (window.SpeechRecognition || window.webkitSpeechRecognition);
+    if (!SR) setSupported(false);
+  }, []);
+
+  const stop = () => {
+    try { recognitionRef.current?.stop(); } catch {}
+    setIsListening(false);
+  };
+
+  const start = () => {
+    const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (!SR) {
+      alert('Voice input is not supported in this browser. Try Chrome or Edge.');
       return;
     }
 
-    const recognition = new SpeechRecognition();
-    
-    // Language mapping
-    const languageMap = {
-      'en': 'en-US',
-      'hi': 'hi-IN',
-      'kn': 'kn-IN'
-    };
-
-    recognition.language = languageMap[language] || 'en-US';
-    recognition.continuous = false;
+    const recognition = new SR();
+    const languageMap = { en: 'en-US', hi: 'hi-IN', kn: 'kn-IN' };
+    recognition.lang = languageMap[language] || 'en-US';
+    recognition.continuous = true;
     recognition.interimResults = true;
 
-    recognition.onstart = () => {
-      setIsListening(true);
-      setTranscript('');
-    };
+    finalTextRef.current = '';
+
+    recognition.onstart = () => setIsListening(true);
 
     recognition.onresult = (event) => {
-      let interimTranscript = '';
-      
+      let interim = '';
       for (let i = event.resultIndex; i < event.results.length; i++) {
-        const transcript = event.results[i][0].transcript;
-        
+        const piece = event.results[i][0].transcript;
         if (event.results[i].isFinal) {
-          setTranscript(prev => prev + transcript);
+          finalTextRef.current += piece + ' ';
         } else {
-          interimTranscript += transcript;
+          interim += piece;
         }
       }
+      const live = (finalTextRef.current + interim).trim();
+      if (live) onTranscript(live);
     };
 
     recognition.onerror = (event) => {
-      console.error('Speech recognition error:', event.error);
-      alert(`Error: ${event.error}`);
+      if (event.error !== 'aborted' && event.error !== 'no-speech') {
+        console.error('Speech error:', event.error);
+      }
+      setIsListening(false);
     };
 
     recognition.onend = () => {
       setIsListening(false);
-      // Auto-send if transcript is available
-      if (transcript.trim()) {
-        onVoiceInput(transcript);
-        setTranscript('');
-      }
     };
 
-    recognition.start();
+    recognitionRef.current = recognition;
+    try {
+      recognition.start();
+    } catch (e) {
+      console.error('Could not start recognition:', e);
+    }
   };
 
+  const toggle = () => (isListening ? stop() : start());
+
+  if (!supported) return null;
+
   return (
-    <div className={styles.voiceInputContainer}>
-      <button
-        onClick={startListening}
-        disabled={isListening || disabled}
-        className={`${styles.voiceButton} ${isListening ? styles.listening : ''}`}
-        title="Use voice input"
-      >
-        🎤 {isListening ? 'Listening...' : 'Voice'}
-      </button>
-      
-      {transcript && (
-        <span className={styles.transcript}>{transcript}</span>
-      )}
-    </div>
+    <button
+      type="button"
+      onClick={toggle}
+      disabled={disabled}
+      className={`${styles.voiceButton} ${isListening ? styles.listening : ''}`}
+      title={isListening ? 'Stop listening' : 'Speak'}
+      aria-label={isListening ? 'Stop voice input' : 'Start voice input'}
+    >
+      {isListening ? '⏹' : '🎤'}
+    </button>
   );
 }
