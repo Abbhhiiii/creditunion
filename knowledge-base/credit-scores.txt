@@ -1,0 +1,73 @@
+CREDIT SCORE AND CIBIL INFORMATION
+===================================
+
+1. WHAT IS CREDIT SCORE
+   - Definition: Numerical rating of creditworthiness
+   - Range: 300-900
+   - Provider: CIBIL, Equifax, Experian, CRIF High Mark
+   - Update frequency: Monthly
+   - Free check: Available on RBI portal
+   - Purpose: Determine loan eligibility
+
+2. SCORE RANGES AND MEANING
+   - 750-900: Excellent (Easy approval)
+   - 700-749: Good (Likely approval)
+   - 650-699: Fair (Conditional approval)
+   - 600-649: Poor (Difficult approval)
+   - Below 600: Very Poor (Likely rejection)
+   - No history: Neutral (First-time applicants)
+
+3. FACTORS AFFECTING CREDIT SCORE
+   - Payment history: 35% (Most important)
+   - Credit utilization: 30% (Keep below 30%)
+   - Length of history: 15% (Longer is better)
+   - Credit mix: 10% (Variety of credit types)
+   - New credit inquiries: 10% (Fewer is better)
+
+4. IMPACT OF LOAN AND CREDIT
+   - New loan: Decreases score by 10-50 points temporarily
+   - Missed payment: Decreases by 100-150 points
+   - Default (3+ months): Major decrease, reporting to authorities
+   - Credit card payment: Increases score when on time
+   - Zero balance: Does not improve score much
+   - Account closure: May reduce score slightly
+
+5. IMPROVING CREDIT SCORE
+   - Pay bills on time: Most important action
+   - Reduce credit card balance: Keep below 30%
+   - Increase credit limit: Request increase without hard inquiry
+   - Mix of credit: Maintain different types of credit
+   - Don't apply for multiple cards: Limit hard inquiries
+   - Dispute errors: Incorrect entries can be challenged
+   - Regular monitoring: Check annually
+
+6. HOW CREDIT SCORE AFFECTS LOANS
+   - Score 750+: Lowest interest rate, instant approval
+   - Score 700-749: Standard interest rate, quick approval
+   - Score 650-699: Slightly higher rate, additional documents
+   - Score 600-649: Higher rate, requires collateral
+   - Below 600: Very high rate or rejection
+   - Special cases: Can get loans with co-applicant
+
+7. FREE CREDIT SCORE CHECK
+   - CIBIL website: cibil.com (1 free annual report)
+   - RBI portal: mfin.rbi.org.in (Free annual check)
+   - Bank portal: Often provides free score check
+   - Credit card company: Many provide free monthly monitoring
+   - Response file: Available within 30 days of request
+
+8. DISPUTE RESOLUTION FOR CREDIT SCORE
+   - Error identification: Check for incorrect entries
+   - Dispute filing: File with credit bureau directly
+   - Documentation: Provide proof of error
+   - Investigation: Bureau reviews within 30 days
+   - Resolution: Correction reflected within 15 days
+   - Appeal: If not resolved, escalate to RBI
+
+9. CREDIT SCORE MAINTENANCE AFTER LOAN
+   - During loan: Make timely EMI payments
+   - Impact: On-time payments improve score
+   - Full payment: Improve score significantly
+   - Prepayment: Good for score, reduces interest
+   - After closure: Account shows on report for 7 years
+   - Reference: Useful for future loan applications

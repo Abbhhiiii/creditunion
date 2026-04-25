@@ -1,0 +1,76 @@
+SECURITY AND FRAUD PREVENTION
+==============================
+
+1. PHISHING AND SCAM PREVENTION
+   - Never ask: Password, PIN, CVV in email/phone
+   - Verify: Always call official number back
+   - URL check: Look for HTTPS and correct domain
+   - Attachment: Don't download from unknown sources
+   - Links: Hover to check actual URL before clicking
+   - Grammar: Scams often have spelling errors
+   - Urgency: Be suspicious of "act now" pressure
+
+2. CARD SECURITY BEST PRACTICES
+   - Keep card safe: Don't share card details
+   - Store receipt: Don't discard with card info visible
+   - Monitor transactions: Check regularly for unauthorized use
+   - Deactivate: When replacing card
+   - Chip use: Prefer chip over swipe when possible
+   - Contactless limit: $50 without PIN verification
+   - Online shopping: Use strong password-protected sites
+
+3. ONLINE BANKING SECURITY
+   - Strong password: Minimum 8 chars, mixed case, numbers, special
+   - 2-FA enabled: Use authenticator app preferred over SMS
+   - Browser security: Update browser and OS regularly
+   - Public WiFi: Avoid for banking transactions
+   - Log out: Always after session
+   - Device security: Use antivirus and firewall
+   - Session timeout: 15 minutes
+
+4. FRAUD REPORTING
+   - Immediate action: Call 1-800-UNION-CU immediately
+   - Card fraud: Report within 24 hours
+   - Account fraud: Report as soon as discovered
+   - Unauthorized transfer: Report before deadline
+   - Document: Keep proof of reporting
+   - Fraud alert: Free credit freeze available
+   - Monitor account: Check regularly
+
+5. FRAUD PROTECTION GUARANTEE
+   - Unauthorized cards: $0 liability if reported
+   - Fraudulent transfer: Full refund (conditions apply)
+   - Phishing: Full account protection if acted quickly
+   - Chargeback fraud: Fighting your corner
+   - Identity theft: Credit monitoring offered
+   - Liability: Limited by federal law
+
+6. IDENTITY THEFT PROTECTION
+   - Credit freeze: Available at all 3 bureaus
+   - Fraud alert: 1 year (7 years for victim)
+   - Monitoring: Free for credit union members
+   - Lost documents: Report to authorities
+   - Social security: Protect your SSN
+   - Data breach: Notification within 30 days
+   - Recovery: Step-by-step assistance provided
+
+7. SAFE TRANSACTION PRACTICES
+   - Cover PIN: When entering at ATM or POS
+   - Different passwords: For different sites
+   - Biometric: Enable fingerprint/face recognition
+   - Verification: Call number from statement for confirmation
+   - Recent activity: Review regularly
+   - Devices: Don't use shared computers for banking
+   - Backups: Save important confirmations
+
+8. SUSPICIOUS ACTIVITY CHECKLIST
+   - Account locked after few wrong attempts
+   - Unexpected transactions appearing
+   - Cards not received in 7 days
+   - Change of address confirmation you didn't request
+   - New cards arriving you didn't order
+   - Account statements missing
+   - Bills not arriving
+   - Calls about accounts you don't have
+
+Report any of these immediately!

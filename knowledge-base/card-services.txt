@@ -1,0 +1,72 @@
+CREDIT UNION CARD SERVICES
+===========================
+
+1. DEBIT CARD FEATURES
+   - Annual fee: $0
+   - Replacement fee: $0 for first 2 replacements
+   - Daily withdrawal limit: $500
+   - Online transaction limit: $2,000/day
+   - International transactions: Allowed
+   - Currency conversion: 2.5% mark-up
+   - Chip + PIN security: Yes
+   - Contactless payment: Yes
+
+2. CREDIT CARD OPTIONS
+   - Credit limit: $1,000 to $100,000
+   - Interest rate: 12% to 28% APR
+   - Annual fee: $0 - $150 (based on tier)
+   - Grace period: 45 days
+   - Minimum payment: 5% of outstanding balance
+   - Rewards: 1-2 points per $1 spent
+   - Rewards redemption: Cash back, travel, shopping
+
+3. CARD BLOCKING/UNBLOCKING
+   - Blocked reason: Transaction limit exceeded, lost, stolen, fraud
+   - Block time: Immediate upon request
+   - Unblock time: 24 hours online request, instant call center
+   - Temporary block: Available for 24 hours
+   - Documents needed: ID verification only
+   - Online process: Self-service portal
+   - Phone process: 24/7 helpline
+
+4. CARD REPLACEMENT
+   - Lost card: Immediate block, replacement in 7 days
+   - Damaged card: Replacement in 5 days
+   - Expired card: Automatic issue 30 days before expiry
+   - Address change: Reissued to new address
+   - Name change: Reissued with new name
+   - Fee: $0 for first replacement
+
+5. EMV AND SECURITY FEATURES
+   - CVV protection: Required for online payments
+   - 3D Secure: Enabled for international transactions
+   - OTP verification: For online transactions above $200
+   - Tokenization: Supported for repeat merchants
+   - Fraud protection: $0 liability for unauthorized use
+   - Encryption: 256-bit SSL
+
+6. CARD ACTIVATION
+   - New card activation: Online or phone required
+   - Activation time: Immediate
+   - Online activation: Portal login required
+   - Phone activation: 24/7 helpline
+   - International use: Enabled after activation
+   - PIN setting: Online or ATM
+   - Deactivation: Available anytime
+
+7. PIN MANAGEMENT
+   - Change PIN: Online, ATM, or phone
+   - Forgot PIN: Online reset or visit branch
+   - PIN attempts: 3 attempts, then locked for 24 hours
+   - PIN length: 4 digits
+   - PIN reset fee: $0
+   - Speed: Instant for online/phone
+
+8. CARD STATEMENT AND BILLING
+   - Statement delivery: Monthly
+   - Online statement: Real-time access
+   - Paper statement fee: $0 for first 12 months
+   - Payment due date: 21 days from statement
+   - Autopay available: Yes
+   - Paperless option: Yes
+   - Statement period: Calendar month

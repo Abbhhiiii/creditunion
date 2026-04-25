@@ -1,0 +1,114 @@
+/* Case List Styles */
+.caseList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px;
+}
+
+.caseCard {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background: #f8f9fa;
+  border-left: 4px solid #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  gap: 15px;
+}
+
+.caseCard:hover {
+  background: #e8eef7;
+  transform: translateX(4px);
+}
+
+.caseCard.selected {
+  background: #e3e9f3;
+  border-left-color: #667eea;
+}
+
+.statusIndicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  min-width: 50px;
+}
+
+.statusIcon {
+  font-size: 20px;
+}
+
+.caseId {
+  font-size: 11px;
+  color: #7f8c8d;
+  font-weight: 600;
+}
+
+.caseInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.userEmail {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.issueType {
+  margin: 3px 0 0 0;
+  font-size: 12px;
+  color: #7f8c8d;
+  text-transform: capitalize;
+}
+
+.priorityBadge {
+  padding: 6px 10px;
+  background: #fef5e7;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #7d6608;
+  white-space: nowrap;
+}
+
+.sentimentBadge {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.sentimentBadge.frustrated {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.sentimentBadge.angry {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.sentimentBadge.positive {
+  background: #d4edda;
+  color: #155724;
+}
+
+.metaInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 3px;
+  font-size: 11px;
+  color: #7f8c8d;
+  min-width: 60px;
+  text-align: right;
+}
+
+.time {
+  font-size: 10px;
+}

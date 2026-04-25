@@ -1,0 +1,83 @@
+ACCOUNT MANAGEMENT PROCEDURES
+=============================
+
+1. ACCOUNT OPENING PROCEDURE
+   - Step 1: Visit online portal or branch
+   - Step 2: Fill application form
+   - Step 3: Submit ID and address proof
+   - Step 4: Video KYC verification (online) or in-person
+   - Step 5: Agree to terms and conditions
+   - Step 6: Account activated within 24 hours
+   - Documents: Valid ID, address proof, PAN (if available)
+   - Processing fee: $0
+
+2. KNOW YOUR CUSTOMER (KYC) REQUIREMENTS
+   - Primary document: Passport, Aadhar, Driver's License, Voter ID
+   - Address proof: Utility bill, rent agreement, bank statement
+   - PAN: Optional for first $25,000/year transactions
+   - Income proof: Salary slip, ITR, business registration
+   - Verification: Video call or in-person
+   - Update requirements: When details change
+
+3. ADDRESS UPDATE PROCEDURE
+   - Online process: Portal self-service (24 hours)
+   - Phone process: Customer service (1-2 days)
+   - Branch process: In-person with document (same day)
+   - Documents needed: Utility bill or government ID
+   - Fee: $0
+   - Effective from: Within 24 hours
+
+4. NAME CHANGE PROCEDURE
+   - Reason: Marriage, deed poll, court order
+   - Documents: Marriage certificate, deed poll, or court order
+   - Processing time: 5-7 business days
+   - Fee: $0
+   - New cards issued: Yes, with updated name
+   - Notification: Updated in all accounts
+
+5. ACCOUNT TRANSFER (TO ANOTHER PERSON)
+   - Only joint account holders can claim
+   - Death of primary holder: Automatically to co-holder
+   - Otherwise: Not transferable
+   - Nomination: Can be changed anytime
+   - Successor: Can be nominated for automatic transfer
+
+6. ACCOUNT REACTIVATION
+   - Dormant account: No transactions for 2 years
+   - Reactivation process: Contact customer service
+   - Documents: ID verification
+   - Fee: $0 for reactivation
+   - Time: 24 hours
+   - Balance: Preserved from dormancy
+
+7. ACCOUNT UPGRADE/DOWNGRADE
+   - Upgrade: Anytime based on eligibility
+   - Downgrade: Anytime, subject to minimum requirements
+   - Fee: $0
+   - Time: Immediate
+   - Benefits: Automatically updated
+   - Notification: Via email and SMS
+
+8. TRANSACTION LIMITS
+   - Daily ATM withdrawal: $500
+   - Daily online transfer: $10,000
+   - Daily debit card usage: $2,000
+   - Monthly transfer: Unlimited
+   - Standing order: Unlimited
+   - Limits by: Account type and balance
+
+9. BULK PAYMENT PROCEDURES
+   - File format: CSV, Excel, or bank-specific
+   - File submission: Online portal or branch
+   - Validation: Automatic checks for errors
+   - Processing time: Same-day or next-day
+   - Batch limit: Maximum 1,000 transactions
+   - Fee: $0.25 per transaction (minimum $5)
+
+10. STATEMENT AND RECORD PROCEDURES
+    - Digital statement: Free, available anytime
+    - Paper statement: Free for first 12 months
+    - Statement format: PDF downloadable online
+    - Statement archival: Available for 7 years
+    - Certificate of balance: $0 per copy
+    - Credit certificate: $0 per copy

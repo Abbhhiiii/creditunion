@@ -1,0 +1,77 @@
+CREDIT UNION LOAN PRODUCTS
+===========================
+
+1. PERSONAL LOANS
+   - Loan amount: $500 to $50,000
+   - Interest rate: 7.5% to 15% APR (based on credit score)
+   - Tenure: 6 months to 7 years
+   - Processing fee: 1% of loan amount
+   - Prepayment: No penalty
+   - Documents required: Income proof, ID, address proof
+   - Approval time: 24-48 hours
+   - Co-applicant: Optional
+
+2. HOME LOANS
+   - Loan amount: $50,000 to $1,000,000
+   - Interest rate: 4.5% to 6.5% APR
+   - Tenure: 10 to 30 years
+   - Down payment: Minimum 20%
+   - Processing fee: 1.5% of loan amount
+   - Insurance: Mandatory
+   - Documents: 2 years income tax returns, employment letter
+   - Approval time: 15-30 days
+   - Home valuation: Required
+
+3. AUTO LOANS
+   - Vehicle value: $5,000 to $250,000
+   - Interest rate: 5.5% to 12.5% APR
+   - Tenure: 3 to 7 years
+   - Down payment: Minimum 15%
+   - Insurance: Mandatory
+   - Gap insurance: Available
+   - Approval time: 3-5 days
+   - Documents: ID, income proof, vehicle details
+
+4. EDUCATION LOANS
+   - Course period: Up to 7 years in repayment
+   - Loan amount: $5,000 to $250,000
+   - Interest rate: 4.5% to 8.5% APR
+   - Moratorium: Up to 6 months after completion
+   - Co-applicant: Usually required (parent/guardian)
+   - Eligible courses: Accredited institutions
+   - Processing fee: 0.5% of loan amount
+   - Approval time: 7-10 days
+
+5. BUSINESS LOANS
+   - Business type: Sole proprietor to Partnership
+   - Loan amount: $10,000 to $500,000
+   - Interest rate: 8% to 15% APR
+   - Tenure: 1 to 10 years
+   - Documents: Business registration, 2 years ITR, balance sheet
+   - Business plan: Required
+   - Collateral: May be required
+   - Approval time: 15-25 days
+
+6. LOAN ELIGIBILITY CRITERIA
+   - Age: 21 to 65 years
+   - Income: Minimum $24,000/year
+   - Employment: Minimum 2 years in current job
+   - CIBIL score: Minimum 700
+   - Debt-to-income ratio: Maximum 50%
+   - Existing loan: Maximum 3 active loans
+
+7. LOAN REPAYMENT OPTIONS
+   - Monthly installments: Standard
+   - Bi-weekly: Available for salaried
+   - Flexible repayment: Available
+   - Bullet repayment: For business loans
+   - Partial prepayment: No penalty
+   - Full prepayment: No penalty after 6 months
+   - EMI calculator: Available on portal
+
+8. DEFAULT AND PENALTY
+   - Late payment: $25 penalty
+   - Cheque bouncing: $50 per instance
+   - EMI default (3+ months): CIBIL reporting
+   - Legal action: After 6 months default
+   - Recovery charges: As per RBI guidelines

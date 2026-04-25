@@ -1,0 +1,83 @@
+DIGITAL BANKING SERVICES
+==========================
+
+1. MOBILE BANKING APP
+   - Features: View balance, transfer money, pay bills
+   - Download: iOS and Android
+   - Security: Biometric login, encryption
+   - Available 24/7: Yes
+   - Transaction limit: Up to $10,000 per day
+   - Fund transfer: To own accounts or other banks
+   - Bill payments: Utilities, credit cards, insurance
+
+2. INTERNET BANKING (ONLINE PORTAL)
+   - Access: login.creditunion.com
+   - Browser: Chrome, Firefox, Safari, Edge
+   - Two-factor authentication: Required
+   - Features: Account view, transfers, statements
+   - Mobile responsive: Yes
+   - Session timeout: 15 minutes idle
+   - Password: Change every 90 days
+
+3. LOGIN AND SECURITY
+   - Username: Email or account number
+   - Password: Minimum 8 characters, alphanumeric + special
+   - Two-FA: SMS OTP or authenticator app
+   - Biometric: Fingerprint or face recognition
+   - Device registration: New device needs verification
+   - Lost password: Reset via email (24 hours)
+   - Session logout: Auto-logout after 15 minutes
+
+4. FUND TRANSFER OPTIONS
+   - RTGS (Real-time): Above $10,000, instant
+   - NEFT (Delayed): Up to $10,000, 1-2 hours
+   - IMPS (Immediate): Up to $100,000, instant (24/7)
+   - UPI: Via Unified Payment Interface
+   - Domestic transfer: Free to own accounts
+   - Outstation transfer: Free for NEFT/RTGS
+   - International transfer: $25 fee + currency conversion
+
+5. UPI PAYMENT SYSTEM
+   - Available on: Mobile app and third-party apps
+   - Features: Send/receive money, QR code payments
+   - Transaction limit: $100,000 per transaction
+   - Daily limit: Unlimited transactions
+   - Security: PIN-based
+   - Registration: Mobile number + bank account
+   - Virtual address: username@bankname format
+
+6. BILL PAYMENT AND UTILITIES
+   - Available billers: Over 15,000 companies
+   - Categories: Electricity, water, gas, telecom, insurance
+   - Auto-pay: Set recurring payments
+   - Receipt: Digital receipt available
+   - Processing: Same day or next day
+   - Fee: Free for most services
+   - Payment proof: SMS and email confirmation
+
+7. CHEQUE MANAGEMENT
+   - Checkbook request: Online or branch
+   - Processing time: 5-7 days
+   - Cheque printing: Free, standard design
+   - Stop payment: Online or phone, $30 fee
+   - Cheque status: Online tracking
+   - Cheque deposit: Mobile app image deposit
+   - Clearing time: 2-3 days for local, 5-7 days outstation
+
+8. E-STATEMENTS AND ARCHIVAL
+   - Available from: Online portal
+   - Format: PDF downloadable
+   - Period: Last 7 years
+   - Frequency: Monthly
+   - Email: Auto-delivery option
+   - Print: Download and print
+   - Authentication: Digital signature available
+
+9. ACCOUNT ALERTS
+   - Available alerts: Balance, transaction, statement
+   - Delivery: SMS and email
+   - Customization: Turn on/off in portal
+   - Threshold alerts: Set custom amount limits
+   - Transaction alerts: For all transactions
+   - Statement alert: Monthly reminder
+   - Security alert: Login from new device

@@ -1,0 +1,67 @@
+DISPUTE RESOLUTION PROCESS
+============================
+
+1. TRANSACTION DISPUTE PROCESS
+   - Filing deadline: 90 days from transaction
+   - Documentation needed: Transaction receipt, identity proof
+   - Investigation period: 10-15 working days
+   - Merchant contact: Yes, for online transactions
+   - Refund timeline: 3-5 business days after resolution
+   - Appeal option: Yes, within 30 days
+   - Fee for dispute: $0 (free)
+
+2. DISPUTE CATEGORIES
+   - Unauthorized transaction
+   - Duplicate charge
+   - Service not provided
+   - Partial refund claim
+   - Billing error
+   - Card not used transactions
+   - Phishing/fraud
+
+3. DOCUMENTATION REQUIREMENTS
+   - Original transaction receipt
+   - Communication with merchant
+   - Proof of payment (if applicable)
+   - Police FIR (for fraud cases)
+   - Bank statement showing transaction
+   - Any evidence of non-delivery
+
+4. FRAUD CLAIM PROCESS
+   - Immediate reporting: Within 24 hours of discovery
+   - Card blocking: Automatic for fraud claims
+   - Police complaint: Required for amounts > $500
+   - Investigation: 30-45 days
+   - Provisional credit: Available within 10 days
+   - Final resolution: Within 90 days
+
+5. CHARGEBACK PROCESS
+   - Applicable for: Credit card transactions
+   - Timeline: Within 120 days of transaction
+   - Documentation: Proof of non-delivery
+   - Merchant response: 30 days allowed
+   - Final decision: Made by card network
+   - Appeal available: Yes
+
+6. COMPLAINT ESCALATION
+   - Level 1: Customer service (5 days)
+   - Level 2: Department manager (10 days)
+   - Level 3: Executive level (15 days)
+   - RBI Ombudsman: After Level 3 resolution
+   - RBI Portal: complaints.rbi.org.in
+   - No fee: For any complaint
+
+7. SETTLEMENT OPTIONS
+   - Full refund
+   - Partial refund
+   - Credit to account
+   - Store credit (if merchant authorized)
+   - Goodwill settlement
+   - Replacement of service
+
+8. RESOLUTION STATUS TRACKING
+   - Online portal: Real-time updates
+   - Email notifications: At each stage
+   - SMS alerts: For major updates
+   - Customer helpline: For queries
+   - Case reference number: Provided immediately
