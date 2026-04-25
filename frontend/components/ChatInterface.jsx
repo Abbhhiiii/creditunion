@@ -42,8 +42,13 @@ export default function ChatInterface({ conversationId, userId, user, token }) {
     }
   }[language][key]);
 
+  const voiceStopRef = useRef(null);
+
   const sendMessage = async (text) => {
     if (!text.trim() || conversationEnded) return;
+    // If voice recognition is still running, stop it before sending so it
+    // doesn't keep rewriting the input behind us.
+    voiceStopRef.current?.();
 
     const userMessage = { id: Date.now(), content: text, sender: 'user', timestamp: new Date() };
     setMessages((prev) => [...prev, userMessage]);
@@ -171,6 +176,7 @@ export default function ChatInterface({ conversationId, userId, user, token }) {
             />
             <VoiceInput
               onTranscript={(text) => setInputValue(text)}
+              registerStop={(fn) => { voiceStopRef.current = fn; }}
               language={language}
               disabled={loading}
             />
